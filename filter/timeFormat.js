@@ -4,7 +4,6 @@
     let newdate = new Date()
     newdate.setTime(value)
     let nyear = newdate.getFullYear()
-    // let ftime = 'yyyy-MM-dd HH:mm:ss'
     let ftime = 'HH:mm:ss'
     let dateitems = {
         M: newdate.getMonth() + 1,
@@ -17,7 +16,6 @@
     if (/(y+)/.test(ftime)) {
         ftime = ftime.replace(RegExp.$1, nyear)
     }
-    //替换月份以及其他的
     for (let i in dateitems) {
         if (new RegExp('(' + i + '+)').test(ftime)) {
         ftime = ftime.replace(
