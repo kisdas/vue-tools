@@ -7,7 +7,7 @@
      */
     getLocalStorage(sKey, version='v1.0', callback) {
         let result;
-        let projectKey = 'pcclient';
+        let projectKey = 'clientm';
         if (window.__ths_localstorage && window.__ths_localstorage[sKey] && window.__ths_localstorage[sKey].v === version) {
             if (callback) {
                 callback(window.__ths_localstorage[sKey].value);
@@ -35,7 +35,7 @@
      * @param {*} version :版本号
      */
     setLocalStorage(sKey, item, version = 'v1.0') {
-        let projectKey = 'pcclient';
+        let projectKey = 'client';
         //为了防止对象被修改
         let value = JSON.parse(JSON.stringify(item));
         if (window.__ths_localstorage) {

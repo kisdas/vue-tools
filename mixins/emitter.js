@@ -12,8 +12,6 @@ export default {
             params.uid = this._uid;
             var parent = this.$parent || this.$root;
             var name = parent.$options.name;
-            console.log( parent)
-    
             while (parent && (!name || name !== componentName)) {
                 params.uid = parent._uid;
                 parent = parent.$parent;
@@ -22,7 +20,6 @@ export default {
                     name = parent.$options.name;
                 }
             }
-    
             if (parent) {
                 return parent.$emit.apply(parent, [eventName].concat(params));
             }
