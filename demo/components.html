@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>123</div>
+    <div id='aa'>
+        <div id='app-1'></div>
+    </div>
+    <div id='aaa'>
+        <div id='app-2'></div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./vueComponent.js"></script>
+    <script>
+        // function dqgChunk(vm,id){
+        //     vm.$mount(id);
+        //     const obj = {
+        //         vm: vm
+        //     }
+        // }
+        // console.log(app5.$mount('#app-1').reverseMessage())
+        document.getElementById('aa').addEventListener('reverseMessage',function (e) {
+            app5.$mount('#app-2').reverseMessage()
+        })
+    </script>
+</body>
+</html>
